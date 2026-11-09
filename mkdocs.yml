@@ -1,0 +1,125 @@
+site_name: DB Studio
+site_description: A desktop database client for PostgreSQL, MySQL/MariaDB and SQLite, with a careful AI assistant.
+site_author: DB Studio contributors
+site_url: https://hasinishraq.github.io/db-studio-documentation/
+repo_url: https://github.com/hasinishraq/db-studio-documentation
+copyright: Copyright &copy; 2026 DB Studio
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: en
+  icon:
+    logo: material/database
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Atkinson Hyperlegible
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Home: index.md
+  - Getting started:
+      - getting-started/index.md
+      - Installation: getting-started/installation.md
+      - First connection: getting-started/first-connection.md
+  - User guide:
+      - user-guide/index.md
+      - How everything works: user-guide/how-it-works.md
+      - Connections: user-guide/connections.md
+      - SQL editor: user-guide/sql-editor.md
+      - Reviews and safety: user-guide/safety.md
+      - Tables and inline editing: user-guide/tables.md
+      - Import and export: user-guide/import-export.md
+      - Schema diagram: user-guide/diagrams.md
+      - AI assistant: user-guide/assistant.md
+      - Settings: user-guide/settings.md
+      - Audit log: user-guide/audit-log.md
+      - Keyboard shortcuts: user-guide/shortcuts.md
+  - Architecture:
+      - architecture/index.md
+      - Technologies and languages: architecture/tech-stack.md
+      - Workspace and crates: architecture/workspace.md
+      - Startup, state and threads: architecture/runtime.md
+      - Life of a query: architecture/query-lifecycle.md
+      - Data flows: architecture/data-flows.md
+      - Safety engine: architecture/safety-engine.md
+      - Sessions and transactions: architecture/sessions.md
+      - Database drivers: architecture/drivers.md
+      - AI assistant: architecture/ai.md
+      - Storage and secrets: architecture/storage.md
+      - Networking, TLS and SSH: architecture/networking.md
+      - Frontend: architecture/frontend.md
+      - IPC and bindings: architecture/ipc.md
+  - Security:
+      - security/index.md
+      - Threat model: security/threat-model.md
+      - Safety rules: security/rules.md
+  - Development:
+      - development/index.md
+      - Environment: development/environment.md
+      - Testing: development/testing.md
+      - Releasing: development/releasing.md
+      - Conventions: development/conventions.md
+  - Reference:
+      - reference/index.md
+      - IPC commands: reference/ipc-commands.md
+      - Error codes: reference/errors.md
+      - Settings: reference/settings.md
+      - Data model: reference/data-model.md
+      - Known issues: reference/known-issues.md
+      - Changelog: reference/changelog.md
