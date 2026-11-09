@@ -1,5 +1,7 @@
 # DB Studio documentation
 
+**Live site: <https://hasinishraq.github.io/db-studio-documentation/>**
+
 The documentation site for DB Studio, built with [MkDocs](https://www.mkdocs.org/) and the
 [Material](https://squidfunk.github.io/mkdocs-material/) theme.
 
