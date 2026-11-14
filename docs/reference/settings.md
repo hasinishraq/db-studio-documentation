@@ -3,14 +3,22 @@
 Settings are stored in the app database (`settings` table, one JSON value per key). Unknown or
 missing fields fall back to their defaults.
 
-## General and editor
+The sections below follow the sections of the Settings tab. See [Settings](../user-guide/settings.md)
+for screenshots.
+
+## General
 
 | Setting | Default | Effect |
 |---|---|---|
-| Theme | System | System, Light or Dark |
+| Theme | Match the system | Match the system, Dark or Light |
 | Text size | 100% | Scales the whole window (kept per machine) |
 | Runs kept in history | 1000 | Older history entries are dropped |
 | Hide masked columns in results too | Off | Masked columns show `***` in the grid, not only to the model |
+
+## Editor
+
+| Setting | Default | Effect |
+|---|---|---|
 | Font size | 13 | Editor font size in pixels |
 | Spaces per tab | 2 | Editor indentation |
 | Wrap long lines | Off | Editor word wrap |
@@ -18,7 +26,7 @@ missing fields fall back to their defaults.
 | Show the overview map | Off | The editor's minimap |
 | Suggest names while typing | On | Schema-aware completion |
 
-## Results and behaviour
+## Results and queries
 
 | Setting | Default | Effect |
 |---|---|---|
@@ -26,6 +34,11 @@ missing fields fall back to their defaults.
 | Stop reading a result after (rows) | 0 (no limit) | Row cap for **your** queries; exports always write every row |
 | Show empty values as | `NULL` | Text shown for NULL cells |
 | Row height | Compact | Compact or Roomy |
+
+## Behaviour
+
+| Setting | Default | Effect |
+|---|---|---|
 | Open a query tab after connecting | Off | Opens a SQL tab on connect |
 | Export button format | CSV | CSV, JSON lines, Excel or SQL inserts |
 
@@ -40,7 +53,7 @@ missing fields fall back to their defaults.
 | Run safe reads without asking, in new chats | On | Starting value of the chat's switch |
 | Let the assistant see result rows, in new chats | Off | Starting value; profiles can forbid it |
 
-## Per connection
+## Hidden columns (per connection)
 
 | Setting | Values |
 |---|---|
@@ -49,3 +62,9 @@ missing fields fall back to their defaults.
 
 Columns whose names contain `password`, `passwd`, `pwd`, `secret`, `api_key`, `apikey` or `token`
 are always hidden from the model.
+
+## Troubleshooting
+
+| Action | Effect |
+|---|---|
+| Copy diagnostics | Copies the app version, system details and recent log lines for a bug report |

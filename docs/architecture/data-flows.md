@@ -6,7 +6,7 @@ decides what may run.** For a plain query, see [Life of a query](query-lifecycle
 
 ## Inline edits
 
-![Pending edits in the grid](../assets/screenshots/22-inline-edit-pending.png){ .shot }
+![Pending edits in the grid](../assets/screenshots/074-inline-edit-pending.png){ .shot }
 
 ```mermaid
 sequenceDiagram
@@ -59,7 +59,7 @@ Details that matter:
 
 ## CSV import
 
-![Import mapping](../assets/screenshots/29-import-mapping.png){ .shot }
+![Import mapping](../assets/screenshots/087-import-mapping.png){ .shot }
 
 ```mermaid
 sequenceDiagram
@@ -117,7 +117,7 @@ streams back over a `Channel`.
 
 ## Schema diagram and image export
 
-![The diagram](../assets/screenshots/32-diagram-zoomed.png){ .shot }
+![The diagram](../assets/screenshots/092-diagram-drag-zoom.png){ .shot }
 
 ```mermaid
 flowchart LR

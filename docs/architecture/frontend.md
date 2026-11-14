@@ -67,7 +67,7 @@ const outcomes = await unwrap(commands.runQuery(target.session, sql, token, runI
 `ResultsGrid` renders only the visible rows. Measured: a million rows in about 7 seconds, with the
 worst UI stall around 20 ms and about 37 rows in the DOM.
 
-![Rows in the virtual grid](../assets/screenshots/08-results-10k-rows.png){ .shot }
+![Rows in the virtual grid](../assets/screenshots/044-results-10k-rows.png){ .shot }
 
 How it stays fast:
 

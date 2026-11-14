@@ -2,6 +2,17 @@
 
 On macOS use ++cmd++ in place of ++ctrl++.
 
+## Command palette
+
+Press ++ctrl+k++, or click the search box in the title bar (*Search commands, tabs and
+connections*). It lists **Actions** (new query, new connection, open the assistant, the audit log
+or settings, with their shortcuts) and a **New query on …** entry for every connection. Type to
+narrow the list. ++esc++ closes it.
+
+| All commands | Typing to search |
+|---|---|
+| ![The command palette](../assets/screenshots/115-command-palette.png){ .shot loading=lazy } | ![No matching command for "diag"](../assets/screenshots/116-command-palette-search.png){ .shot loading=lazy } |
+
 ## Anywhere
 
 | Keys | Action |
@@ -15,8 +26,6 @@ On macOS use ++cmd++ in place of ++ctrl++.
 | ++ctrl+l++ | Open the audit log |
 | ++ctrl+comma++ | Open settings |
 | ++ctrl+plus++ / ++ctrl+minus++ / ++ctrl+0++ | Bigger, smaller, reset text size |
-
-![Command palette](../assets/screenshots/53-command-palette.png){ .shot }
 
 ## SQL editor and results
 
@@ -35,6 +44,13 @@ On macOS use ++cmd++ in place of ++ctrl++.
 | ++enter++ / ++tab++ / ++shift+tab++ | Keep the value and move down / right / left |
 | ++esc++ | Cancel the edit |
 | ++alt+n++ | Set NULL |
+
+## Assistant
+
+| Keys | Action |
+|---|---|
+| ++enter++ | Send |
+| ++shift+enter++ | New line |
 
 ## Side panel
 
