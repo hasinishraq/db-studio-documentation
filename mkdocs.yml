@@ -90,6 +90,8 @@ nav:
       - Settings: user-guide/settings.md
       - Audit log: user-guide/audit-log.md
       - Keyboard shortcuts: user-guide/shortcuts.md
+      - Troubleshooting: user-guide/troubleshooting.md
+      - Light and dark: user-guide/themes.md
   - Architecture:
       - architecture/index.md
       - Technologies and languages: architecture/tech-stack.md

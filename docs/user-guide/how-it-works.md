@@ -18,7 +18,7 @@ flowchart LR
 
 ## The window
 
-![The main window](../assets/screenshots/01-explorer-connections.png){ .shot }
+![The main window](../assets/screenshots/028-tree-postgres-shop.png){ .shot }
 
 | Area | What it holds |
 |---|---|
@@ -41,19 +41,19 @@ the **environment** (Development, Staging, Production) and whether it is **read-
 
 === "General"
 
-    ![Connection: General](../assets/screenshots/04-connection-general.png){ .shot }
+    ![Connection: General](../assets/screenshots/005-connection-filled.png){ .shot }
 
 === "TLS"
 
-    ![Connection: TLS](../assets/screenshots/05-connection-tls.png){ .shot }
+    ![Connection: TLS](../assets/screenshots/010-tls-verify-full-default.png){ .shot }
 
 === "SSH"
 
-    ![Connection: SSH](../assets/screenshots/06-connection-ssh.png){ .shot }
+    ![Connection: SSH](../assets/screenshots/019-ssh-private-key.png){ .shot }
 
 If the server's certificate cannot be trusted, the connection is refused and the reason is shown:
 
-![A TLS verification failure](../assets/screenshots/47-error-tls-verify.png){ .shot }
+![A TLS verification failure](../assets/screenshots/015-test-fail-mysql-self-signed.png){ .shot }
 
 !!! abstract "Behind the scenes"
     1. `save_profile` stores the profile in the app's SQLite file **without** the password.
@@ -69,12 +69,12 @@ If the server's certificate cannot be trusted, the connection is refused and the
 
 ## 2. Browse databases, schemas and tables
 
-![MySQL and MariaDB databases](../assets/screenshots/03-explorer-mysql-mariadb.png){ .shot }
+![MySQL and MariaDB databases](../assets/screenshots/034-tree-mysql.png){ .shot }
 
 Click a database or schema to use it. Right-click it to make it the default, or to remember it for
 the next connect:
 
-![Right-click a schema](../assets/screenshots/02-right-click-default-schema.png){ .shot }
+![Right-click a schema](../assets/screenshots/031-menu-schema.png){ .shot }
 
 !!! abstract "Behind the scenes"
     `list_databases`, `list_schemas` and `list_objects` ask the driver's metadata queries.
@@ -89,24 +89,24 @@ the next connect:
 Open **New query**, type SQL and press ++ctrl+enter++. Completion knows the tables and columns
 of the database in use.
 
-![Completion in the editor](../assets/screenshots/07-editor-completion.png){ .shot }
+![Completion in the editor](../assets/screenshots/043-editor-completion-columns.png){ .shot }
 
 Rows stream in as they arrive; the grid stays responsive even for very large results.
 
-![Rows streaming into the grid](../assets/screenshots/08-results-10k-rows.png){ .shot }
+![Rows streaming into the grid](../assets/screenshots/044-results-10k-rows.png){ .shot }
 
 Every statement gets a line in the run log, and **Explain** draws the plan as a tree:
 
 | Run log | Explain |
 |---|---|
-| ![Run log](../assets/screenshots/11-results-and-run-log.png){ .shot } | ![Explain plan](../assets/screenshots/10-explain-plan.png){ .shot } |
+| ![Run log](../assets/screenshots/048-results-and-run-log.png){ .shot } | ![Explain plan](../assets/screenshots/047-explain-plan.png){ .shot } |
 
 Errors are reported as the server gives them, with the position underlined when the server
 reports one:
 
 | Unknown column | Duplicate key |
 |---|---|
-| ![Unknown column](../assets/screenshots/42-error-unknown-column.png){ .shot } | ![Duplicate key](../assets/screenshots/43-error-unique.png){ .shot } |
+| ![Unknown column](../assets/screenshots/097-error-unknown-column.png){ .shot } | ![Duplicate key](../assets/screenshots/100-error-unique.png){ .shot } |
 
 !!! abstract "Behind the scenes"
     ```mermaid
@@ -138,29 +138,29 @@ and environment it targets.
 
 === "A change"
 
-    ![Review an UPDATE](../assets/screenshots/14-review-change.png){ .shot }
+    ![Review an UPDATE](../assets/screenshots/055-review-update.png){ .shot }
 
 === "Cannot be undone"
 
-    ![Review a DROP](../assets/screenshots/15-review-danger.png){ .shot }
+    ![Review a DROP](../assets/screenshots/058-review-drop.png){ .shot }
 
     Locked until you tick *I understand this cannot be undone*.
 
 === "Does not parse"
 
-    ![Review unparsable SQL](../assets/screenshots/16-review-unparsed.png){ .shot }
+    ![Review unparsable SQL](../assets/screenshots/060-review-unparsed.png){ .shot }
 
     Unknown SQL is treated as a write.
 
 === "Production"
 
-    ![Production review](../assets/screenshots/17-review-production.png){ .shot }
+    ![Production review](../assets/screenshots/063-review-production.png){ .shot }
 
     You type the connection's name to unlock **Run**.
 
 On a read-only connection the change is refused even after you approve it:
 
-![Read-only refusal](../assets/screenshots/18-read-only-refused.png){ .shot }
+![Read-only refusal](../assets/screenshots/065-read-only-refused.png){ .shot }
 
 !!! abstract "Behind the scenes"
     ```mermaid
@@ -191,7 +191,7 @@ press **Commit** or **Roll back**:
 
 | Uncommitted changes | Switching is refused |
 |---|---|
-| ![Manual transaction](../assets/screenshots/19-manual-transaction.png){ .shot } | ![Commit first](../assets/screenshots/20-commit-first.png){ .shot } |
+| ![Manual transaction](../assets/screenshots/066-manual-transaction.png){ .shot } | ![Commit first](../assets/screenshots/067-switch-refused-uncommitted.png){ .shot } |
 
 !!! abstract "Behind the scenes"
     `set_tx_mode(Manual)` begins a transaction on the session's current connection and keeps that
@@ -202,24 +202,24 @@ press **Commit** or **Roll back**:
 
 Click a table to page through it on the server, 100 rows at a time, with filters and sorting:
 
-![Filter and sort](../assets/screenshots/21-table-filter-sort.png){ .shot }
+![Filter and sort](../assets/screenshots/072-filter-chips-sorted.png){ .shot }
 
 Edit cells, insert rows and mark rows for deletion. Nothing is saved yet:
 
-![Pending edits](../assets/screenshots/22-inline-edit-pending.png){ .shot }
+![Pending edits](../assets/screenshots/074-inline-edit-pending.png){ .shot }
 
 **Review and save** turns everything into SQL and shows it in one review; it runs all or nothing:
 
 | One review | Saved |
 |---|---|
-| ![Review](../assets/screenshots/23-inline-edit-review.png){ .shot } | ![Saved](../assets/screenshots/24-inline-edit-saved.png){ .shot } |
+| ![Review](../assets/screenshots/075-inline-edit-review.png){ .shot } | ![Saved](../assets/screenshots/076-inline-edit-saved.png){ .shot } |
 
 If someone changed a row since you loaded it, or the database refuses a statement, nothing is
 saved and your edits stay pending:
 
 | Row changed meanwhile | Refused by a foreign key |
 |---|---|
-| ![Row changed](../assets/screenshots/25-inline-edit-refused.png){ .shot } | ![Foreign key](../assets/screenshots/44-error-foreign-key.png){ .shot } |
+| ![Row changed](../assets/screenshots/077-inline-edit-conflict.png){ .shot } | ![Foreign key](../assets/screenshots/078-error-foreign-key.png){ .shot } |
 
 !!! abstract "Behind the scenes"
     The webview sends **values only** (`ChangeSet`). Rust's `grid_edit_info` decides which columns
@@ -237,7 +237,7 @@ saved and your edits stay pending:
 
 | Map the columns | Import finished |
 |---|---|
-| ![Import mapping](../assets/screenshots/29-import-mapping.png){ .shot } | ![Import done](../assets/screenshots/30-import-done.png){ .shot } |
+| ![Import mapping](../assets/screenshots/087-import-mapping.png){ .shot } | ![Import done](../assets/screenshots/089-import-done.png){ .shot } |
 
 **Export** writes CSV, JSON lines, Excel or SQL inserts from a result, a selection or a whole table.
 
@@ -250,13 +250,13 @@ saved and your edits stay pending:
 
 ## 7. See the schema as a diagram
 
-![Schema diagram](../assets/screenshots/31-diagram.png){ .shot }
+![Schema diagram](../assets/screenshots/090-diagram-sales.png){ .shot }
 
 Pan, zoom, drag tables and **Export image** as PNG, JPEG or PDF:
 
 | Export | The saved PNG |
 |---|---|
-| ![Export dialog](../assets/screenshots/33-diagram-export.png){ .shot } | ![Exported PNG](../assets/screenshots/34-diagram-export-output.png){ .shot } |
+| ![Export dialog](../assets/screenshots/093-diagram-export.png){ .shot } | ![Exported PNG](../assets/screenshots/094-diagram-export-output.png){ .shot } |
 
 !!! abstract "Behind the scenes"
     The diagram is laid out and drawn as SVG in the webview from `table_structure` metadata. To
@@ -268,17 +268,17 @@ Pan, zoom, drag tables and **Export image** as PNG, JPEG or PDF:
 
 Ask in plain language. The assistant sees only the database in use:
 
-![Scoped to the database in use](../assets/screenshots/38-assistant-scoped.png){ .shot }
+![Scoped to the database in use](../assets/screenshots/141-assistant-scoped-to-schema.png){ .shot }
 
 Safe reads run on their own and can be drawn as charts from the real rows:
 
 | Pie | Bar | Line |
 |---|---|---|
-| ![Pie](../assets/screenshots/35-assistant-pie.png){ .shot } | ![Bar](../assets/screenshots/36-assistant-bar.png){ .shot } | ![Line](../assets/screenshots/37-assistant-line.png){ .shot } |
+| ![Pie](../assets/screenshots/128-assistant-pie.png){ .shot } | ![Bar](../assets/screenshots/129-assistant-bar.png){ .shot } | ![Line](../assets/screenshots/130-assistant-line.png){ .shot } |
 
 Anything else waits for your approval:
 
-![A proposed change](../assets/screenshots/39-assistant-write-review.png){ .shot }
+![A proposed change](../assets/screenshots/132-assistant-write-review.png){ .shot }
 
 !!! abstract "Behind the scenes"
     ```mermaid
@@ -306,7 +306,7 @@ Anything else waits for your approval:
 
 Every non-read statement, from any source, is recorded and hash-chained:
 
-![Audit log](../assets/screenshots/52-audit-log.png){ .shot }
+![Audit log](../assets/screenshots/114-audit-log-verified.png){ .shot }
 
 !!! abstract "Behind the scenes"
     The session writes an `AuditEntry` (time, connection, environment, origin, kind, SQL, its
@@ -318,11 +318,11 @@ Every non-read statement, from any source, is recorded and hash-chained:
 
 | General | Results and queries |
 |---|---|
-| ![General settings](../assets/screenshots/48-settings-general.png){ .shot } | ![Query settings](../assets/screenshots/49-settings-queries.png){ .shot } |
+| ![General settings](../assets/screenshots/105-settings-general.png){ .shot } | ![Query settings](../assets/screenshots/107-settings-results.png){ .shot } |
 
 | Assistant | Per connection |
 |---|---|
-| ![Assistant settings](../assets/screenshots/50-settings-assistant.png){ .shot } | ![Masking](../assets/screenshots/51-settings-masking.png){ .shot } |
+| ![Assistant settings](../assets/screenshots/124-assistant-settings-openrouter.png){ .shot } | ![Masking](../assets/screenshots/109-settings-hidden-columns.png){ .shot } |
 
 Settings are stored as one JSON value per key in the app database; the API key goes to the
 keychain. See the [settings reference](../reference/settings.md).

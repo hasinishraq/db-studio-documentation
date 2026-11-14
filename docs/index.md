@@ -8,7 +8,7 @@ hide:
 **A desktop database client for PostgreSQL, MySQL/MariaDB and SQLite, with a check before every
 change and an AI assistant that cannot act without you.**
 
-![DB Studio with six connections across four engines](assets/screenshots/01-explorer-connections.png){ .shot }
+![DB Studio with six connections across four engines](assets/screenshots/028-tree-postgres-shop.png){ .shot }
 
 DB Studio is a native desktop app built with [Tauri 2](https://tauri.app/): a Rust backend in a
 Cargo workspace and a React + TypeScript interface in the system webview. It is designed around one
@@ -54,6 +54,16 @@ you typed that SQL, edited a cell, imported a file or asked the assistant.
     [:octicons-arrow-right-24: Architecture](architecture/index.md)
 
 </div>
+
+## A quick look
+
+| Query and stream results | Review every change | Edit tables in place |
+|---|---|---|
+| ![Results](assets/screenshots/044-results-10k-rows.png){ .shot loading=lazy } | ![Production review](assets/screenshots/063-review-production.png){ .shot loading=lazy } | ![Pending edits](assets/screenshots/074-inline-edit-pending.png){ .shot loading=lazy } |
+| **Draw the schema** | **Ask the assistant** | **Audit everything** |
+| ![Diagram](assets/screenshots/090-diagram-sales.png){ .shot loading=lazy } | ![Assistant pie chart](assets/screenshots/128-assistant-pie.png){ .shot loading=lazy } | ![Audit log](assets/screenshots/114-audit-log-verified.png){ .shot loading=lazy } |
+
+Every screen also comes in a [light theme](user-guide/themes.md).
 
 ## At a glance
 

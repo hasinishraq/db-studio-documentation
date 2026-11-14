@@ -55,15 +55,15 @@ below it re-check every input, and only the domain layer decides what runs.
 
 | What you see | Frontend | Commands | Crates |
 |---|---|---|---|
-| ![Side panel](../assets/screenshots/01-explorer-connections.png){ .shot width="260" }<br/>Side panel | `shell/Explorer.tsx` | `list_profiles`, `connect`, `list_databases`, `list_objects` | `studio-store`, `studio-session`, `driver-*` |
-| ![SQL tab](../assets/screenshots/08-results-10k-rows.png){ .shot width="260" }<br/>SQL tab | `workbench/SqlTab.tsx`, `ResultsGrid.tsx`, `api/run.ts` | `prepare_query`, `run_query`, `cancel_run`, `explain_query` | `studio-safety`, `studio-session` |
-| ![Review](../assets/screenshots/14-review-change.png){ .shot width="260" }<br/>Review | `modals/ConfirmDialog.tsx` | `approve_query` | `studio-safety` (`ApprovalBook`) |
-| ![Table grid](../assets/screenshots/22-inline-edit-pending.png){ .shot width="260" }<br/>Table grid | `workbench/TableTab.tsx`, `EditableGrid.tsx`, `lib/pendingEdits.ts` | `table_page`, `grid_edit_info`, `plan_row_changes`, `run_row_changes` | `studio-session` (`run_changes`) |
-| ![Import](../assets/screenshots/29-import-mapping.png){ .shot width="260" }<br/>Import | `modals/ImportWizard.tsx` | `import_pick_file`, `import_plan`, `import_csv` | `studio-session` (`run_import`) |
-| ![Diagram](../assets/screenshots/31-diagram.png){ .shot width="260" }<br/>Diagram | `workbench/ErDiagram.tsx`, `lib/diagram.ts` | `table_structure`, `export_diagram`, `export_schema` | `studio-app` (resvg, svg2pdf) |
-| ![Assistant](../assets/screenshots/35-assistant-pie.png){ .shot width="260" }<br/>Assistant | `ai/AiTab.tsx`, `ReviewCard.tsx`, `ResultChart.tsx` | `ai_send`, `ai_review`, `ai_cancel` | `studio-ai` |
-| ![Audit log](../assets/screenshots/52-audit-log.png){ .shot width="260" }<br/>Audit log | `workbench/AuditTab.tsx` | `audit_list`, `audit_verify`, `audit_export` | `studio-store` |
-| ![Settings](../assets/screenshots/48-settings-general.png){ .shot width="260" }<br/>Settings | `workbench/SettingsTab.tsx` | `settings_get`, `settings_set`, `set_secret`, `masking_set` | `studio-store` |
+| ![Side panel](../assets/screenshots/028-tree-postgres-shop.png){ .shot width="260" }<br/>Side panel | `shell/Explorer.tsx` | `list_profiles`, `connect`, `list_databases`, `list_objects` | `studio-store`, `studio-session`, `driver-*` |
+| ![SQL tab](../assets/screenshots/044-results-10k-rows.png){ .shot width="260" }<br/>SQL tab | `workbench/SqlTab.tsx`, `ResultsGrid.tsx`, `api/run.ts` | `prepare_query`, `run_query`, `cancel_run`, `explain_query` | `studio-safety`, `studio-session` |
+| ![Review](../assets/screenshots/055-review-update.png){ .shot width="260" }<br/>Review | `modals/ConfirmDialog.tsx` | `approve_query` | `studio-safety` (`ApprovalBook`) |
+| ![Table grid](../assets/screenshots/074-inline-edit-pending.png){ .shot width="260" }<br/>Table grid | `workbench/TableTab.tsx`, `EditableGrid.tsx`, `lib/pendingEdits.ts` | `table_page`, `grid_edit_info`, `plan_row_changes`, `run_row_changes` | `studio-session` (`run_changes`) |
+| ![Import](../assets/screenshots/087-import-mapping.png){ .shot width="260" }<br/>Import | `modals/ImportWizard.tsx` | `import_pick_file`, `import_plan`, `import_csv` | `studio-session` (`run_import`) |
+| ![Diagram](../assets/screenshots/090-diagram-sales.png){ .shot width="260" }<br/>Diagram | `workbench/ErDiagram.tsx`, `lib/diagram.ts` | `table_structure`, `export_diagram`, `export_schema` | `studio-app` (resvg, svg2pdf) |
+| ![Assistant](../assets/screenshots/128-assistant-pie.png){ .shot width="260" }<br/>Assistant | `ai/AiTab.tsx`, `ReviewCard.tsx`, `ResultChart.tsx` | `ai_send`, `ai_review`, `ai_cancel` | `studio-ai` |
+| ![Audit log](../assets/screenshots/114-audit-log-verified.png){ .shot width="260" }<br/>Audit log | `workbench/AuditTab.tsx` | `audit_list`, `audit_verify`, `audit_export` | `studio-store` |
+| ![Settings](../assets/screenshots/105-settings-general.png){ .shot width="260" }<br/>Settings | `workbench/SettingsTab.tsx` | `settings_get`, `settings_set`, `set_secret`, `masking_set` | `studio-store` |
 
 ## Principles
 
